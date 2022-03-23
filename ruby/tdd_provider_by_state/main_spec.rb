@@ -60,7 +60,7 @@ RSpec.describe 'provider_by_state' do
     end
   end
 
-  context 'when providers contains ABC and Home Entry' do
+  context 'when providers contains ABC, Home Entry and Road-Tec' do
     let(:providers) { [abc_provider, home_entry_provider, road_tec_provider] }
 
     # If this exception occurs, we should update the code to handle it better.
@@ -75,7 +75,7 @@ RSpec.describe 'provider_by_state' do
   end
 
   # Unskip this test to demonstrate the importance of TDD.
-  xcontext 'with 4 providers' do
+  context 'with 4 providers' do
     let(:providers) { [abc_provider, road_tec_provider, home_entry_provider, OpenStruct.new] }
 
     # If this exception occurs, we should update the code to handle it better.
